@@ -1,0 +1,95 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+td,
+th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  // width: 100%;
+  display: table;
+  border: none;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', san-serif;
+  margin: 0.5rem 0 0rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.16), 0 5px 15px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+table.material-table tr td {
+  height: 80px;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: solid 1px #DDDDDD;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.material-table th {
+  font-weight: bolder;
+  color: #000000;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 56px;
+  // padding-left: 20px;
+  vertical-align: middle;
+  outline: none !important;
+}
+
+table td:first-child {
+  padding: 0 0 0 24px;
+}
+
+thead {
+  color: black;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: rgb(213, 213, 213);
+  color: rgb(0, 0, 0);
+}
+
+.table-header {
+  height: 64px;
+  // padding-left: 24px;
+  // padding-right: 14px;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-display: flex;
+  border-bottom: solid 1px #DDDDDD;
+}
+
+table.material-table {
+
+  th:last-child,
+  td:last-child {
+    padding: 0 14px 0 0;
+  }
+
+  th:first-child,
+  td:first-child {
+    padding: 0 0 0 24px;
+  }
+}
+
+table tbody tr:hover {
+  background-color: #EEE;
+}
