@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SliderComponent } from './component/component/slider/slider.component';
 import { TableComponent } from './component/component/table/table.component';
+import { AboutComponent } from './component/layout/about/about.component';
 import { HomeComponent } from './component/layout/home/home.component';
 import { FooterComponent } from './component/utils/footer/footer.component';
 import { NavbarComponent } from './component/utils/navbar/navbar.component';
@@ -10,6 +11,7 @@ import { StripHeadComponent } from './component/utils/strip-head/strip-head.comp
 const routes: Routes = [
   // Pages
   {path:"", component:HomeComponent},
+  { path:"about",component:AboutComponent},
 
 
   // Utils

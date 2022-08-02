@@ -15,6 +15,7 @@ th {
 }
 
 table {
+
   border-collapse: collapse;
   border-spacing: 0;
   // width: 100%;
@@ -23,14 +24,17 @@ table {
 }
 
 .card {
+  overflow: scroll ;
   position: relative;
-  overflow: hidden;
+  height: 50em;
+  // overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   font-family: 'Roboto', san-serif;
   margin: 0.5rem 0 0rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px;
-  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.16), 0 5px 15px 0 rgba(0, 0, 0, 0.12);
+  // box-shadow: 0 15px 14px 0 rgba(0, 0, 0, 0.16), 0 15px 15px 0 rgba(0, 0, 0, 0.12);
 }
 
 
@@ -92,4 +96,51 @@ table.material-table {
 
 table tbody tr:hover {
   background-color: #EEE;
+}
+
+.grid-all {
+  color: white;
+  padding: 0;
+  text-align: start;
+}
+.grid-up {
+  background-color: #3a9d37;
+  color: white;
+  margin-right: 3px;
+  text-align: start;
+}
+.grid-down {
+  background-color: #f25961;
+  color: white;
+  margin-right: 3px;
+  text-align: start;
+}
+.grid-stabil {
+  background-color: #ffffff;
+  color: white;
+  margin-right: 3px;
+  text-align: start;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+.bods{
+  margin-top: 1em;
 }

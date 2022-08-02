@@ -18,7 +18,9 @@ import   localeTr from '@angular/common/locales/tr';
 import   localeTrExtra from '@angular/common/locales/extra/tr';
 import { TableComponent } from './component/component/table/table.component';
 import { SliderComponent } from './component/component/slider/slider.component';
-
+import { HomeProvider } from './component/service/home.provider';
+import { HomeContentComponent } from './component/component/home-content/home-content.component';
+import { FixFooterComponent } from './component/component/fix-footer/fix-footer.component';
 registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
 
 @NgModule({
@@ -32,6 +34,8 @@ registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
     ContactComponent,
     TableComponent,
     SliderComponent,
+    HomeContentComponent,
+    FixFooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,7 @@ registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
 
     MatIconModule,
   ],
-  providers: [],
+  providers: [HomeProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
