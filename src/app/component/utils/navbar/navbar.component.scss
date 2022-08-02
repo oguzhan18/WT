@@ -19,7 +19,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
+  right:0;
   padding-bottom: 1rem;
   text-align: left;
   background: var(--color-dark);
@@ -36,6 +36,7 @@ nav ul {
 
 nav ul li{
 font-size: 17px;
+
 }
 nav ul li a:hover{
   color: #b79019;
