@@ -24,9 +24,11 @@ table {
 }
 
 .card {
-  overflow: scroll ;
+  overflow: hidden;
+  // overflow: scroll;
   position: relative;
-  height: 50em;
+  // burada scroll kapatıp eski görünümünü sağlamak için tabla boyutu ile oynamış bulunmaktayım. Ancak tekrar eds yeni bir sembol eklenirse patlar....
+  height: 53em;
   // overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   font-family: 'Roboto', san-serif;
@@ -39,12 +41,14 @@ table {
 
 
 table.material-table tr td {
-  height: 80px;
+  height: 68px;
   color: rgba(0, 0, 0, 0.87);
   border-bottom: solid 1px #DDDDDD;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: bolder;
 }
 
 table.material-table th {
@@ -94,8 +98,9 @@ table.material-table {
   }
 }
 
-table tbody tr:hover {
-  background-color: #EEE;
+table tbody tr td:hover {
+  // background-color: #EEE;
+  color: #b79019;
 }
 
 .grid-all {
@@ -103,18 +108,21 @@ table tbody tr:hover {
   padding: 0;
   text-align: start;
 }
+
 .grid-up {
   background-color: #3a9d37;
   color: white;
   margin-right: 3px;
   text-align: start;
 }
+
 .grid-down {
   background-color: #f25961;
   color: white;
   margin-right: 3px;
   text-align: start;
 }
+
 .grid-stabil {
   background-color: #ffffff;
   color: white;
@@ -122,25 +130,25 @@ table tbody tr:hover {
   text-align: start;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
+// ::-webkit-scrollbar {
+//   width: 5px;
+// }
 
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 1px;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   border-radius: 1px;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-  border-radius: 2px;
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: rgb(0, 0, 0);
+//   border-radius: 2px;
+// }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #000000;
-}
-.bods{
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #000000;
+// }
+.bods {
   margin-top: 1em;
 }

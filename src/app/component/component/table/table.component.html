@@ -7,14 +7,26 @@
             <th>GENEL</th>
             <th>ALIŞ</th>
             <th>SATIŞ</th>
+            <th></th>
           </tr>
         </thead>
-        <tbody *ngFor="let socketData of parityList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': socketData.askPercentChange >0,'grid-stabil': socketData.askPercentChange ===0,
-               'grid-down': socketData.askPercentChange <0}">
+        <!-- <tbody *ngFor="let socketData of parityList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': socketData.askPercentChange >0,'grid-stabil': socketData.askPercentChange ===0,
+               'grid-down': socketData.askPercentChange <0}"> -->
+        <tbody *ngFor="let socketData of parityList; let i=index; trackBy : trackByPrice">
           <tr>
             <td> {{socketData.Code}} </td>
-            <td>{{socketData.Ask}}</td>
-            <td>{{socketData.Bid}}</td>
+            <td style="font-size: 16px;">{{socketData.Bid | number:'1.2-4' }}</td>
+
+            <td style="font-size: 16px;">{{socketData.Ask | number:'1.2-4' }} </td>
+            <td style="margin-left:70% ;font-size: 16px;">
+              <i class="material-icons" *ngIf="socketData.askPercentChange > 0">keyboard_arrow_up</i>
+              <i class="material-icons" *ngIf="socketData.askPercentChange < 0">keyboard_arrow_down</i>
+            </td>
+
+
+
+
+
           </tr>
         </tbody>
       </table>
@@ -26,16 +38,27 @@
         <thead>
           <tr>
             <th>GENEL</th>
-            <th>ALIŞ</th>
-            <th>SATIŞ</th>
+            <th style="font-size: 16px;">ALIŞ</th>
+            <th style="font-size: 16px;">SATIŞ</th>
+            <th style="font-size: 16px;"></th>
           </tr>
         </thead>
-        <tbody *ngFor="let data of goldList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': data.askPercentChange >0,'grid-stabil': data.askPercentChange ===0,
-          'grid-down': data.askPercentChange <0}">
+        <!-- <tbody *ngFor="let data of goldList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': data.askPercentChange >0,'grid-stabil': data.askPercentChange ===0,
+          'grid-down': data.askPercentChange <0}"> -->
+        <tbody *ngFor="let data of goldList; let i=index; trackBy : trackByPrice">
           <tr>
             <td> {{data.Code}} </td>
-            <td>{{data.Ask}}</td>
-            <td>{{data.Bid}}</td>
+            <td style="font-size: 16px;">{{data.Bid| number:'1.2-4' }}</td>
+            <td style="font-size: 16px;">{{data.Ask| number:'1.2-4' }} </td>
+            <td style="font-size: 16px;">
+              <i class="material-icons" *ngIf="data.askPercentChange > 0">keyboard_arrow_up</i>
+              <i class="material-icons" *ngIf="data.askPercentChange < 0">keyboard_arrow_down</i>
+            </td>
+
+
+
+
+
           </tr>
         </tbody>
       </table>
@@ -49,14 +72,20 @@
             <th>GENEL</th>
             <th>ALIŞ</th>
             <th>SATIŞ</th>
+            <th></th>
           </tr>
         </thead>
-        <tbody *ngFor="let gramadata of currencyList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,'grid-stabil': gramadata.askPercentChange ===0,
-          'grid-down': gramadata.askPercentChange <0}">
+        <!-- <tbody *ngFor="let gramadata of currencyList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,'grid-stabil': gramadata.askPercentChange ===0,
+          'grid-down': gramadata.askPercentChange <0}"> -->
+        <tbody *ngFor="let gramadata of currencyList; let i=index; trackBy : trackByPrice">
           <tr>
             <td> {{gramadata.Code}} </td>
-            <td>{{gramadata.Ask}}</td>
-            <td>{{gramadata.Bid}}</td>
+            <td style="font-size: 16px;">{{gramadata.Bid| number:'1.2-4' }}</td>
+            <td style="font-size: 16px;">{{gramadata.Ask| number:'1.2-4' }}</td>
+            <td style="font-size: 16px;">
+              <i class="material-icons" *ngIf="gramadata.askPercentChange > 0">keyboard_arrow_up</i>
+              <i class="material-icons" *ngIf="gramadata.askPercentChange < 0">keyboard_arrow_down</i>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -211,7 +211,7 @@ export class TableComponent implements OnInit {
       let oldAskPrice = +oldData.Ask;
       let newAskPrice = +newData.Ask;
       let askPriceDifference = (1 - (oldAskPrice / newAskPrice)) * 100;
-      newData.askPercentChange = +askPriceDifference.toFixed(2);
+      newData.askPercentChange = +askPriceDifference.toFixed(3);
       newData.Time = Date.now();
       if (askPriceDifference < 0) {
         const code = newData.Code;
