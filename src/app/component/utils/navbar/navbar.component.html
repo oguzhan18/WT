@@ -1,11 +1,11 @@
-<header>
+<!-- <header>
   <label for="nav-toggle" class="nav-toggle-label">
-    <span> <i class="material-icons">menu</i> </span>
+    <span></span>
   </label>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <img src="../../../../assets/image/logo/banner-logo.png" width="350" >
 
-  <nav>
+  <nav style="margin-right: 7em;">
     <ul >
       <li><a href="/">ANASAYFA</a></li>
       <li><a href="http://ilkerdoviz.com/"              target="_blank">İLKER DÖVİZ KURLARI İÇİN TIKLAYINIZ</a></li>
@@ -16,4 +16,27 @@
     </ul>
   </nav>
 </header>
+ -->
 
+    <header>
+      <div id="nav-head">
+        <div id="logo"><img src="../../../../assets/image/logo/banner-logo.png" width="320" height="80" ></div>
+
+        <label for="menu-toggle">
+            <div class="toggle-icon">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </label>
+      </div>
+      <input type="checkbox" id="menu-toggle">
+      <ul class="nav-links">
+        <li><a href="/">ANASAYFA</a></li>
+        <li><a href="http://ilkerdoviz.com/"              target="_blank">İLKER DÖVİZ KURLARI İÇİN TIKLAYINIZ</a></li>
+        <li><a href="https://www.safiris.com.tr/"         target="_blank">SAFİRİŞ ONLINE SATIŞ İÇİN TIKLAYINIZ</a></li>
+        <li><a href="../../../../assets/docs/katalog.pdf" target="_blank">ALTINKAYA BİLEZİK KATALOĞU</a></li>
+        <li routerLink="/about"><a target="_blank">HAKKIMIZDA</a></li>
+        <li routerLink="/contact"><a target="_blank">İLETİŞİM</a></li>
+      </ul>
+    </header>
