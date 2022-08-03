@@ -21,7 +21,7 @@
             <td style="font-size: 16px;">{{socketData.Ask | number:'1.2-4' }} </td>
             <td style="margin-left:70% ;font-size: 16px;">
               <i class="material-icons" *ngIf="socketData.askPercentChange > 0">keyboard_arrow_up</i>
-              <i class="material-icons" *ngIf="socketData.askPercentChange == 0">keyboard_capslock</i>
+              <i class="material-icons" *ngIf="socketData.askPercentChange == 0">remove</i>
               <i class="material-icons" *ngIf="socketData.askPercentChange < 0">keyboard_arrow_down</i>
             </td>
           </tr>
@@ -50,7 +50,7 @@
             <td style="font-size: 16px;">{{data.Ask| number:'1.2-4' }} </td>
             <td style="font-size: 16px;">
               <i class="material-icons" *ngIf="data.askPercentChange > 0">keyboard_arrow_up</i>
-              <i class="material-icons" *ngIf="data.askPercentChange == 0">keyboard_capslock</i>
+              <i class="material-icons" *ngIf="data.askPercentChange == 0">remove</i>
               <i class="material-icons" *ngIf="data.askPercentChange < 0">keyboard_arrow_down</i>
             </td>
 
@@ -68,7 +68,8 @@
       <table class="material-table">
         <thead>
           <tr>
-            <th> {{currencyList[0].Category}} </th>
+            <!-- <th> {{currencyList[0].Category}} </th> -->
+            <th> GRAM ALTIN </th>
             <th>ALIŞ</th>
             <th>SATIŞ</th>
             <th></th>
@@ -83,7 +84,7 @@
             <td style="font-size: 16px;">{{gramadata.Ask| number:'1.2-4' }}</td>
             <td style="font-size: 16px;">
               <i class="material-icons" *ngIf="gramadata.askPercentChange > 0">keyboard_arrow_up</i>
-              <i class="material-icons" *ngIf="gramadata.askPercentChange == 0">keyboard_capslock</i>
+              <i class="material-icons" *ngIf="gramadata.askPercentChange == 0">remove</i>
               <i class="material-icons" *ngIf="gramadata.askPercentChange < 0">keyboard_arrow_down</i>
             </td>
           </tr>

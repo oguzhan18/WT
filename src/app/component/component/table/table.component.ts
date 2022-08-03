@@ -87,9 +87,9 @@ export class TableComponent implements OnInit {
       this.otherList = [];
     }
     this.socketDataList.forEach((item, index) => {
-      if (item.Category === CATEGORYTYPE['GRAM ALTIN']) {
+      if (item.Category === CATEGORYTYPE.GRAM_ALTIN) {
         this.currencyList.push(item);
-      } else if (item.Category === CATEGORYTYPE['SARRAFIYE ESKI TARIHLI']) {
+      } else if (item.Category === CATEGORYTYPE.SARRAFIYE_ESKI_TARIHLI) {
         this.goldList.push(item);
       } else if (item.Category === CATEGORYTYPE.GENEL) {
         this.parityList.push(item);
@@ -211,7 +211,7 @@ export class TableComponent implements OnInit {
       let oldAskPrice = +oldData.Ask;
       let newAskPrice = +newData.Ask;
       let askPriceDifference = (1 - (oldAskPrice / newAskPrice)) * 100;
-      newData.askPercentChange = +askPriceDifference.toFixed(3);
+      newData.askPercentChange = +askPriceDifference.toFixed(2);
       newData.Time = Date.now();
       if (askPriceDifference < 0) {
         const code = newData.Code;
