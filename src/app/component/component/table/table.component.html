@@ -4,7 +4,8 @@
       <table class="material-table">
         <thead>
           <tr>
-            <th> {{parityList[0].Category}} </th>
+            <th>GENEL</th>
+            <!-- <th> {{parityList[0].Category}} </th> -->
             <th>ALIŞ</th>
             <th>SATIŞ</th>
             <th></th>
@@ -33,7 +34,8 @@
       <table class="material-table">
         <thead>
           <tr>
-            <th> {{goldList[0].Category}} </th>
+            <th>SARRAFIYE ESKI TARIHLI</th>
+            <!-- <th> {{goldList[0].Category}} </th> -->
             <th style="font-size: 16px;">ALIŞ</th>
             <th style="font-size: 16px;">SATIŞ</th>
             <th style="font-size: 16px;"></th>
@@ -43,7 +45,7 @@
           'grid-down': data.askPercentChange <0}"> -->
         <tbody *ngFor="let data of goldList; let i=index; trackBy : trackByPrice">
           <tr>
-            <td> {{data.Code}} </td>
+             <td> {{data.Code}} </td>
             <td style="font-size: 16px;">{{data.Bid| number:'1.2-4' }}</td>
             <td style="font-size: 16px;">{{data.Ask| number:'1.2-4' }} </td>
             <td style="font-size: 16px;">
