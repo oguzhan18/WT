@@ -21,6 +21,8 @@ import { SliderComponent } from './component/component/slider/slider.component';
 import { HomeProvider } from './component/service/home.provider';
 import { HomeContentComponent } from './component/component/home-content/home-content.component';
 import { FixFooterComponent } from './component/component/fix-footer/fix-footer.component';
+import { ScreenPageComponent } from './component/layout/screenpage/screenpage.component';
+import { ScreenTableComponent } from './component/component/screen-table/screen-table.component';
 registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
 
 @NgModule({
@@ -36,6 +38,8 @@ registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
     SliderComponent,
     HomeContentComponent,
     FixFooterComponent,
+    ScreenPageComponent,
+    ScreenTableComponent,
   ],
   imports: [
     BrowserModule,

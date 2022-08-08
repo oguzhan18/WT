@@ -5,6 +5,7 @@ import { TableComponent } from './component/component/table/table.component';
 import { AboutComponent } from './component/layout/about/about.component';
 import { ContactComponent } from './component/layout/contact/contact.component';
 import { HomeComponent } from './component/layout/home/home.component';
+import { ScreenPageComponent } from './component/layout/screenpage/screenpage.component';
 import { FooterComponent } from './component/utils/footer/footer.component';
 import { NavbarComponent } from './component/utils/navbar/navbar.component';
 import { StripHeadComponent } from './component/utils/strip-head/strip-head.component';
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path:"", component:HomeComponent},
   { path:"about",component:AboutComponent},
   { path:"contact",component:ContactComponent},
+  { path:'ekran', component:ScreenPageComponent},
+
 
 
   // Utils
