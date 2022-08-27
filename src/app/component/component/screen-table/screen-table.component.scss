@@ -37,12 +37,11 @@ table {
 
 table.material-table tr td {
   height: 68px;
-  color: rgba(0, 0, 0, 0.87);
   border-bottom: solid 1px #DDDDDD;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px;
+  font-size: 26px;
   font-weight: bolder;
 }
 
@@ -100,24 +99,28 @@ table tbody tr td:hover {
   padding: 0;
   text-align: start;
 }
-
-.grid-up {
-  background-color: #3a9d37;
-  color: white;
+.grid-up{
+  background-color: #E1ffd6;
+  color: rgb(0, 0, 0);
+  margin-right: 3px;
+  text-align: start;
+}
+.up {
+  background-color: #E1ffd6;
+  color: rgb(0, 0, 0);
   margin-right: 3px;
   text-align: start;
 }
 
 .grid-down {
-  background-color: #f25961;
-  color: white;
+  background-color: #FFD6D6;
+  color: rgb(0, 0, 0);
   margin-right: 3px;
   text-align: start;
 }
 
 .grid-stabil {
-  background-color: #ffffff;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-right: 3px;
   text-align: start;
 }

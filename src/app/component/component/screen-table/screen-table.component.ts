@@ -1,4 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HomeProvider } from '../../service/home.provider';
 import { CATEGORYTYPE } from '../../service/_models/categoryType';
@@ -34,10 +35,13 @@ export class ScreenTableComponent implements OnInit {
   interval: any;
 
   constructor(private renderer: Renderer2,
-              private wsService: HomeProvider) {
+              private wsService: HomeProvider,
+              @Inject(DOCUMENT) private document: any) {
   }
 
   ngOnInit() {
+
+    this.elem = document.documentElement;
     this.interval = setInterval(() => {
       if (this.pingStatus === false) {
         this.subscriptions.unsubscribe();
@@ -50,7 +54,6 @@ export class ScreenTableComponent implements OnInit {
 
   getData() {
     this.wsService.initSocket();
-
     this.subscriptions.add(this.wsService.connectWebSocket().subscribe((Sdata: SocketData[]) => {
         clearTimeout(this.timer);
         this.pingStatus = true;
@@ -71,6 +74,9 @@ export class ScreenTableComponent implements OnInit {
   trackByPrice(index: number, code:any) {
     return code.Ask;
   }
+
+
+
 
   filterData() {
     if (this.currencyList) {
@@ -231,4 +237,58 @@ export class ScreenTableComponent implements OnInit {
   }
 
 
+
+
+
+
+
+  elem:any;
+  toggleClass = 'ft-maximize';
+
+  public config: any = {};
+
+
+
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+    this.closeFullscreen();
+  }
+
+  openFullscreen() {
+    if (this.elem.requestFullscreen) {
+      this.elem.requestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.mozRequestFullScreen) {
+      /* Firefox */
+      this.elem.mozRequestFullScreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.webkitRequestFullscreen) {
+      /* Chrome, Safari and Opera */
+      this.elem.webkitRequestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.msRequestFullscreen) {
+      /* IE/Edge */
+      this.elem.msRequestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    }
+  }
+
+  closeFullscreen() {
+    if (this.document.exitFullscreen) {
+      this.document.exitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.mozCancelFullScreen) {
+      /* Firefox */
+      this.document.mozCancelFullScreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.webkitExitFullscreen) {
+      /* Chrome, Safari and Opera */
+      this.document.webkitExitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.msExitFullscreen) {
+      /* IE/Edge */
+      this.document.msExitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    }
+  }
 }
